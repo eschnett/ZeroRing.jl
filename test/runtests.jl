@@ -5,6 +5,13 @@ zeroelem::ZeroElem
 
 @test zeroelem === zeroelem
 
+@test zeroelem == zeroelem
+@test !(zeroelem != zeroelem)
+@test !(zeroelem < zeroelem)
+@test hash(zeroelem) === hash(zeroelem)
+
+@test rand(ZeroElem) === zeroelem
+
 @test +zeroelem === zeroelem
 @test -zeroelem === zeroelem
 
